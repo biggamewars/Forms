@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1 class="title">REGISTRATION</h1>
+            <form class="registration-form" id="registrationForm" action="https://script.google.com/macros/s/AKfycbwGp3Q95rkskr9roudGsu39mw6id8cTjaM86X-fcqoVblETvcdMMuOD-85nBF0ctoImQQ/exec" method="POST">
+                
+                <!-- Player's Basic Info -->
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="text" name="valorant_tag" placeholder="In-Game Name/Tag" required>
+                <input type="email" name="email" placeholder="Email (example@gmail.com)" required id="email" pattern="[a-zA-Z0-9._%+-]+@gmail\.com" title="Please enter a valid Gmail address">
+                <input type="tel" name="phone" placeholder="Phone (e.g., 123-456-7890)" required id="phone" pattern="\d{3}[-]?\d{3}[-]?\d{4}" title="Please enter a valid phone number in the format 123-456-7890">
+
+                <!-- Gender Selection -->
+                <div class="gender">
+                    <label>Gender:</label>
+                    <label><input type="radio" name="gender" value="Male" required> Male</label>
+                    <label><input type="radio" name="gender" value="Female"> Female</label>
+                    <label><input type="radio" name="gender" value="Other"> Other</label>
+                </div>
+
+                <!-- Team Participation Checkbox -->
+                <div class="team-selection">
+                    <label><input type="checkbox" id="teamCheckbox" name="team" value="with_team"> Join with a team (if you have)</label>
+                </div>
+
+                <!-- Additional Team Member Fields (Initially Hidden) -->
+                <div id="teamMembers" style="display: none;">
+                    <h3 class="subtitle">Add Team Members</h3>
+                    <div class="team-member">
+                        <input type="text" name="team_member_1_name" placeholder="Member 1 Name">
+                        <input type="text" name="team_member_1_tag" placeholder="Game Tag">
+                    </div>
+                    <div class="team-member">
+                        <input type="text" name="team_member_2_name" placeholder="Member 2 Name">
+                        <input type="text" name="team_member_2_tag" placeholder="Game Tag">
+                    </div>
+                    <div class="team-member">
+                        <input type="text" name="team_member_3_name" placeholder="Member 3 Name">
+                        <input type="text" name="team_member_3_tag" placeholder="Game Tag">
+                    </div>
+                    <div class="team-member">
+                        <input type="text" name="team_member_4_name" placeholder="Member 4 Name">
+                        <input type="text" name="team_member_4_tag" placeholder="Game Tag">
+                    </div>
+                </div>
+
+                <!-- Terms and Conditions -->
+                <div class="terms">
+                    <label><input type="checkbox" name="terms" required> I agree to the terms and conditions</label>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn">Register Now</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Popup for success message -->
+    <div id="popup" class="popup">
+        <p>Registration Successful, Thank You for Joining Us!</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

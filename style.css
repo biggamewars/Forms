@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow-y: auto;
+    background: url('img/1868814-3840x2160-desktop-4k-valorant-background-image.jpg') no-repeat center center/cover;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.content {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 360px; /* Set max-width to prevent overflow */
+    text-align: center;
+    color: #f4f4f9;
+    overflow-y: auto; /* Enable scrolling if content exceeds height */
+}
+
+.title {
+    font-size: 1.8em;
+    color: #C0C0C0;
+    margin-bottom: 10px;
+    font-family: "Oswald", sans-serif;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="tel"] {
+    display: block;
+    width: 90%; /* Shorter input field */
+    padding: 6px;
+    margin: 6px auto;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+
+.gender, .team-selection, .terms {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    margin: 8px 0;
+}
+
+.team-selection {
+    margin-bottom: 8px; /* Spacing between team selection and terms */
+}
+
+.terms {
+    margin-bottom: 15px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background: #ead9d9;
+    border: none;
+    border-radius: 5px;
+    color: #050000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #ee0707;
+    box-shadow: 0 0 10px #04ef4ad8;
+}
+
+/* Popup styles */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: #3a86ff;
+    padding: 20px;
+    border-radius: 5px;
+    display: none;
+}
+
+.popup button {
+    background: #3a86ff;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+}
